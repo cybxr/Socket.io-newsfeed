@@ -25,7 +25,6 @@ io.on('connection',async (socket)=>
          
          
     socket.on("sending message",(message)=>{
-        console.log(message);
              if(message==""){}
                else {
                    message = html(message);
@@ -34,7 +33,6 @@ io.on('connection',async (socket)=>
             
         socket.to(socket.request.session.userid).emit('new message',{message:message,name:socket.request.session.myname});
         socket.emit('new message',{message:message,name:socket.request.session.myname})
-        console.log(message);
                 }})
 
     socket.on("new connection",async ()=>{
