@@ -10,7 +10,7 @@ var sessionMiddleware = session({
   name:"Demo",
   resave: false,
   saveUninitialized: false,
-  secret: "aakash",
+  secret: "",
   cookie:{
       maxAge:Time,
       sameSite: true
