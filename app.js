@@ -6,7 +6,7 @@ const mysql = require('mysql');
 const session = require('express-session');
 app=express();
 
-var sessionMiddleware = session({
+sessionMiddleware = session({
   name:"Demo",
   resave: false,
   saveUninitialized: false,
@@ -16,7 +16,6 @@ var sessionMiddleware = session({
       sameSite: true
   
  }})
-global.sessionMiddleware = sessionMiddleware;
 
 global.database = mysql.createConnection({
   host: "localhost",
